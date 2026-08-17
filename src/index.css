@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    @apply bg-surface text-navy-900 font-sans antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+
+  :focus-visible {
+    outline: 2px solid #37496a;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background-color: #c7d0e0;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-navy-900 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-navy-800 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-navy-200 bg-white px-4 py-2.5 text-sm font-medium text-navy-800 transition-colors hover:bg-navy-50 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .card {
+    @apply rounded-lg border border-navy-100 bg-white shadow-subtle;
+  }
+
+  .input-field {
+    @apply w-full rounded-md border border-navy-200 bg-white px-3.5 py-2.5 text-sm text-navy-900 placeholder:text-navy-400 transition-shadow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-300;
+  }
+
+  .section-label {
+    @apply text-xs font-semibold uppercase tracking-wider text-navy-400;
+  }
+}
+
+/* Slim scrollbars for a polished, enterprise feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #c7d0e0;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #9aa9c4;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
