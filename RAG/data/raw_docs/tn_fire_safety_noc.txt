@@ -1,0 +1,32 @@
+SAMPLE REGULATION DOCUMENT (FOR DEMO/TESTING PURPOSES ONLY — NOT AN OFFICIAL GOVERNMENT PUBLICATION)
+Source: Tamil Nadu Fire and Rescue Services — Fire Safety No-Objection Certificate (NOC) Guidance for MSMEs
+Applicable State: Tamil Nadu
+Applicable Industry: All
+Regulation Category: Environmental
+Last Verified Date: 2026-06-01
+Effective Date: 2024-01-01
+
+Section 1: Applicability
+1.1 Every commercial, industrial, or manufacturing establishment operating within Tamil Nadu with a built-up area exceeding 500 square meters, or employing more than 20 workers, must obtain a Fire Safety No-Objection Certificate (NOC) from the Tamil Nadu Fire and Rescue Services before commencing operations.
+1.2 Establishments handling hazardous or flammable materials, regardless of size, must obtain a Fire Safety NOC.
+1.3 Micro enterprises with built-up area below 500 square meters and fewer than 10 workers, and not handling hazardous materials, are exempt from mandatory NOC but are encouraged to obtain a voluntary fire safety inspection certificate.
+
+Section 2: Application Process
+2.1 Applications must be submitted through the Tamil Nadu Single Window Portal along with the building plan, occupancy certificate, and details of fire-fighting equipment installed.
+2.2 A physical inspection by a Fire Station Officer is mandatory before NOC issuance.
+2.3 The standard processing time is 30 working days from the date of complete application submission.
+
+Section 3: Renewal Requirements
+3.1 Fire Safety NOCs are valid for a period of 3 years from the date of issuance.
+3.2 Renewal applications must be submitted at least 60 days before expiry.
+3.3 Any structural modification to the premises requires a fresh NOC application, irrespective of the remaining validity of the existing certificate.
+
+Section 4: Penalties for Non-Compliance
+4.1 Operating without a valid Fire Safety NOC where one is required may result in a penalty and, in cases of continued non-compliance, closure orders under the Tamil Nadu Fire Service Act.
+4.2 Penalty amounts vary by establishment size and are determined by the jurisdictional Fire Station Officer at the time of inspection.
+
+Section 5: Required Fire Safety Equipment (Minimum Standards)
+5.1 Portable fire extinguishers appropriate to the fire risk class of the premises.
+5.2 Clearly marked emergency exits with illuminated signage.
+5.3 Fire alarm systems for establishments exceeding 1000 square meters built-up area.
+5.4 Establishments in this category must also maintain a fire safety log book, inspected periodically by the Fire and Rescue Services.

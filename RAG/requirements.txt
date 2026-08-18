@@ -1,0 +1,9 @@
+fastapi>=0.115
+uvicorn[standard]>=0.32
+chromadb>=0.5
+openai>=1.58
+pypdf>=5.1
+rank-bm25>=0.2
+sentence-transformers>=3.3
+python-dotenv>=1.0
+pydantic>=2.10
