@@ -1,0 +1,16 @@
+{
+  "biz_001": {
+    "business_id": "biz_001",
+    "name": "Chennai Textile Works",
+    "state": "Tamil Nadu",
+    "industry": "manufacturing",
+    "employee_count": 35
+  },
+  "biz_002": {
+    "business_id": "biz_002",
+    "name": "Coimbatore Software Solutions",
+    "state": "Tamil Nadu",
+    "industry": "services",
+    "employee_count": 8
+  }
+}

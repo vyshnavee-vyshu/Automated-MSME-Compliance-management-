@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>MSME Compliance Copilot</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 16px; }
+  select, textarea, button { font-size: 1em; padding: 8px; margin-bottom: 8px; width: 100%; box-sizing: border-box; }
+  button { width: auto; cursor: pointer; }
+  .answer { background: #f4f4f4; padding: 12px; border-radius: 6px; margin-top: 16px; white-space: pre-wrap; }
+  .sources { margin-top: 8px; font-size: 0.9em; color: #444; }
+  .source-item { padding: 4px 0; border-top: 1px solid #ddd; }
+  .flag { color: #a15c00; font-weight: bold; }
+</style>
+</head>
+<body>
+  <h2>MSME Compliance Copilot (Demo)</h2>
+
+  <label>Business profile</label>
+  <select id="businessId">
+    <option value="biz_001">Chennai Textile Works (Tamil Nadu, manufacturing, 35 employees)</option>
+    <option value="biz_002">Coimbatore Software Solutions (Tamil Nadu, services, 8 employees)</option>
+  </select>
+
+  <label>Question</label>
+  <textarea id="question" rows="3" placeholder="Do I need a fire safety NOC?"></textarea>
+
+  <button onclick="ask()">Ask</button>
+
+  <div id="output"></div>
+
+<script>
+async function ask() {
+  const business_id = document.getElementById('businessId').value;
+  const question = document.getElementById('question').value;
+  const output = document.getElementById('output');
+  output.innerHTML = '<p>Thinking...</p>';
+
+  try {
+    const res = await fetch('/chat', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({business_id, question})
+    });
+    const data = await res.json();
+
+    if (!res.ok) {
+      output.innerHTML = `<p class="flag">Error: ${data.detail || res.statusText}</p>`;
+      return;
+    }
+
+    let html = `<div class="answer">${data.answer}</div>`;
+    if (!data.grounded) {
+      html += `<p class="flag">⚠ Not fully grounded in verified regulation data.</p>`;
+    }
+    if (data.sources && data.sources.length) {
+      html += '<div class="sources"><strong>Sources:</strong>';
+      for (const s of data.sources) {
+        html += `<div class="source-item">${s.source_name} — last verified ${s.last_verified_date}</div>`;
+      }
+      html += '</div>';
+    }
+    output.innerHTML = html;
+  } catch (e) {
+    output.innerHTML = `<p class="flag">Request failed: ${e}</p>`;
+  }
+}
+</script>
+</body>
+</html>
