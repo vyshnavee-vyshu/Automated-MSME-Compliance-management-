@@ -7,6 +7,7 @@ import { useApiData } from '../hooks/useApiData'
 import { getLatestNews } from '../services/newsApi'
 
 export default function LatestNews() {
+  
   const { data, isLoading, error } = useApiData(getLatestNews, [])
   const items = Array.isArray(data) ? data : []
 
