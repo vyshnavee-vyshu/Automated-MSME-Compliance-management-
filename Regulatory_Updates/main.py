@@ -2,12 +2,14 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from gst_scraper import scrape_gst_updates
+from labour_law_scraper import scrape_labour_updates
 
 
 app = FastAPI(
-    title="MSME GST Compliance API",
+    title="MSME GST & Labour Compliance API",
     version="1.0.0"
 )
+
 
 app.add_middleware(
     CORSMiddleware,
@@ -23,17 +25,27 @@ app.add_middleware(
 
 @app.get("/")
 def root():
+
     return {
-        "message": "MSME GST Compliance API is running"
+        "message":
+            "MSME GST & Labour Compliance API is running"
     }
 
 
 @app.get("/api/gst/updates")
 def get_gst_updates():
+
     return scrape_gst_updates()
 
 
+@app.get("/api/labour/updates")
+def get_labour_updates():
+
+    return scrape_labour_updates()
+
+
 if __name__ == "__main__":
+
     import uvicorn
 
     uvicorn.run(
